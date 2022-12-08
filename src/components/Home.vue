@@ -15,12 +15,7 @@ import Botons from './Botons.vue';
 			Botons
 		},
 
-		methods: {
-			currentSentence(i){
-				console.log(i);
-				this.activeItem = i;
-			}
-		}
+
 
 	}
 </script>

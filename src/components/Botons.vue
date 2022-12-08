@@ -1,13 +1,25 @@
 <template>
 	<div class="bottons-box">
-		<button @click="currentSentence(i)">Anterior</button>
-		<button @click="currentSentence(i)">Següent</button>
+		<button @click="$emit('decrementarSentence')">Anterior</button>
+		<button @click="$emit('incrementarSentence')">Següent</button> -->
+		<!-- <button @click="currentBotton($event)">Anterior</button>
+		<button @click="currentBotton($event)">Següent</button> -->
 	</div>
 </template>
 
 <script>
 	export default {
-
+		methods:{
+			// currentBotton(e){
+			// 	console.log(e.target.innerHTML)
+			// },
+			incrementarSentence(i){
+				this.activeItem = i++;
+			},
+			decrementarSentence(i){
+				this.activeItem = i--;
+			}
+		}
 	}
 </script>
 
