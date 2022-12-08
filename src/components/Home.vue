@@ -1,7 +1,7 @@
 <template>
 	<div class="parent-box">
-		<Botons/>
-		<Escena ></Escena>
+		<Botons />
+		<Escena  ></Escena>
 	</div>
 </template>
 
@@ -13,7 +13,15 @@ import Botons from './Botons.vue';
 		components: {
 			Escena,
 			Botons
+		},
+
+		methods: {
+			currentSentence(i){
+				console.log(i);
+				this.activeItem = i;
+			}
 		}
+
 	}
 </script>
 

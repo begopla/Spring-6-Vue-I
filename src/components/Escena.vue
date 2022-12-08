@@ -1,10 +1,10 @@
 <template>
 	<div class="text-box">
 		<!-- <p>El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial.</p> -->
-		<div v-for="(data, i) in myTextData" :key="data.id" :class="{current: i=== activeItem}">
+		<div v-for="(data, i) in myTextData" :key="i" :class="{current: i=== activeItem}">
 			<div class="text-border">{{data.text}}</div>
+			<button  @click="currentSentence(i)">make item active</button>
 		</div>
-		<button @click="selectItem(i)">make item active</button>
 	</div>
 </template>
 
@@ -19,11 +19,12 @@ export default {
 		};
 	},
 	methods: {
-		selectItem(i){
-			console.log(i);
-			this.activeItem = i;
-		}
+			currentSentence(i){
+				console.log(i);
+				this.activeItem = i;
+			}
 	}
+
 }
 </script>
 

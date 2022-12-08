@@ -1,7 +1,7 @@
 <template>
 	<div class="bottons-box">
-		<button>Anterior</button>
-		<button>Següent</button>
+		<button @click="currentSentence(i)">Anterior</button>
+		<button @click="currentSentence(i)">Següent</button>
 	</div>
 </template>
 
